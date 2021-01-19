@@ -1,0 +1,16 @@
+number = input("Write a number to check if its Armstrong or not: ")
+
+if not number.isnumeric():
+    print(" It is an invalid entry. Don't use non-numeric, float, or negative values!")
+else:
+    digit = len(str(number))
+    numlist = [int(number) for number in str(number)] # this is a list contains all digits of number
+    temp = 0
+    total = 0 
+    for i in numlist:
+        temp = i ** digit
+        total += temp
+    if total == int(number):
+        print(f"{number} is a Armstrong number")
+    else:
+        print(f"{number} is not a Armstrong number")
